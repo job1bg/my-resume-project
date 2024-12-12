@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branislav - Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="resume-styles.css">
+</head>
+<body>
+    <div class="resume">
+        <header class="resume-header">
+            <h1 class="title-name" id="titleName"></h1>
+            <nav class="resume-nav">
+                <a href="interview.html" class="button">Interview</a>
+            </nav>
+        </header>
+        <main class="content">
+            <div class="box left-box">
+                <img src="img/portfolio-image.jpg" alt="Portfolio Image" class="resume-image">
+
+                <section class="box-section">
+                    <h3>Personal Information</h3>
+                    <hr>
+                    <p id="addressText"><strong>Address: </strong> </p>
+                    <p id="birthdayText"><strong>Date of Birth: </strong> </p>
+                    <p id="languagesText"><strong>Languages: </strong> </p>
+                </section>
+
+                <section class="box-section">
+                    <h3>Education</h3>
+                    <hr>
+                    <p id="educationalTitleText"><strong></strong></p>
+                    <div class="faculty-info">
+                        <p id="facultyNameText"><em> </em> <p id="graduationText"> </p></p>
+                    </div>
+                </section>
+
+                <section class="box-section">
+                    <h3>Skills</h3>
+                    <hr>
+                    <ul id="skillsList"> </ul>
+                </section>
+            </div>
+            <div class="box right-box">
+                <section class="box-section">
+                    <h2>Experience</h2>
+                    <hr>
+                    <div id="experience"> </div>
+                </section>
+
+                <section class="box-section">
+                    <h2>Projects</h2>
+                    <hr>
+                    <div id="projects"> </div>
+                </section>
+            </div>
+        </main>
+        <footer class="resume-footer" id="footerCopyrightText">
+            <p>© Branislav Jovanović - 2024</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
