@@ -1,44 +1,104 @@
-// Get HTML elements resume
+// Create your own resume
+// Set up info
+const myResumeInfoObject = {
+  titleName: "Branislav Jovanović",
+  address: "Bulevar JNA 30",
+  birthday: "January 1, 1996",
+  languages: "Serbian, English",
+  educationalTitle: "Bachelor of Science in Computer Science",
+  facultyName: "Faculty of Sciences",
+  graduationYear: "2020",
+  skills: [
+    "Proficient in Swift and iOS Development",
+    "Experience with TypeScript and JavaScript",
+    "Version control using Git",
+    "Excellent problem-solving and communication skills",
+  ],
+  experience: [
+    // Add experience object
+    {
+      companyNameText: "Robert Bosch d.o.o.",
+      workPeriodStartText: 2021,
+      workPeriodEndText: "Present",
+      companyRoleText: "iOS Developer",
+      tasksList: [
+        "Developed and maintained iOS applications using Swift",
+        "Collaborated with cross-functional teams to design scalable solutions",
+      ],
+    },
+    {
+      companyNameText: "Robert Bosch d.o.o.",
+      workPeriodStartText: 2021,
+      workPeriodEndText: "Present",
+      companyRoleText: "Frontend Developer",
+      tasksList: [
+        "Currently learning and developing web applications using HTML, CSS, and TypeScript",
+      ],
+    },
+  ],
+  projects: [
+    {
+      projectName: "My iOS Project",
+      projectDescriptionList: [
+        "Developed using Swift, SwiftUI and UI",
+        "Google Maps SDK",
+        "Offline-first approach - Core Data",
+        "MVVM Architecture",
+      ],
+    },
+    {
+      projectName: "My Java Project",
+      projectDescriptionList: [
+        "Developed a library management system using Java",
+        "Integrated MySQL for database management",
+        "Implemented multi-threading for concurrent operations",
+      ],
+    },
+    {
+      projectName: "My TypeScript Project",
+      projectDescriptionList: [
+        "Building my resume web page",
+        "Developed using HTML/CSS",
+      ],
+    },
+  ],
+};
 
+// Web Page Implementation
 // Header - title name
 const titleName = document.getElementById("titleName");
-titleName.textContent = "Branislav Jovanović";
+titleName.textContent = myResumeInfoObject.titleName;
 
 // Personal Information - Address
 const addressText = document.getElementById("addressText");
-addressText.childNodes[1].textContent = "Bulevar JNA 30";
+addressText.childNodes[1].textContent = myResumeInfoObject.address;
 
 // Personal Information - Birthday
 const birthdayText = document.getElementById("birthdayText");
-birthdayText.childNodes[1].textContent = "January 1, 1996";
+birthdayText.childNodes[1].textContent = myResumeInfoObject.birthday;
 
 // TODO: Could be array
 // Personal Information - Languages
 const languagesText = document.getElementById("languagesText");
-languagesText.childNodes[1].textContent = "Serbian, English";
+languagesText.childNodes[1].textContent = myResumeInfoObject.languages;
 
 // Education - Title
 const educationalTitleText = document.querySelector(
   "#educationalTitleText strong"
 );
-educationalTitleText.textContent = "Bachelor of Science in Computer Science";
+educationalTitleText.textContent = myResumeInfoObject.educationalTitle;
 
 // Education - Faculty Name
 const facultyNameText = document.querySelector("#facultyNameText em");
-facultyNameText.textContent = "Faculty of Sciences";
+facultyNameText.textContent = myResumeInfoObject.facultyName;
 
 // Education - Faculty Graduation
 const graduationText = document.getElementById("graduationText");
-graduationText.textContent = "2020";
+graduationText.textContent = myResumeInfoObject.graduationYear;
 
 // Skills
 const skillsList = document.getElementById("skillsList");
-const skills = [
-  "Proficient in Swift and iOS Development",
-  "Experience with TypeScript and JavaScript",
-  "Version control using Git",
-  "Excellent problem-solving and communication skills",
-];
+const skills = myResumeInfoObject.skills;
 
 skills.forEach((skill) => {
   const listItem = document.createElement("li");
@@ -49,28 +109,7 @@ skills.forEach((skill) => {
 // Experience
 const companyExperience = document.getElementById("experience");
 
-const experiencesObjectsArray = [
-  // Add experience object
-  {
-    companyNameText: "Robert Bosch d.o.o.",
-    workPeriodStartText: 2021,
-    workPeriodEndText: "Present",
-    companyRoleText: "iOS Developer",
-    tasksList: [
-      "Developed and maintained iOS applications using Swift",
-      "Collaborated with cross-functional teams to design scalable solutions",
-    ],
-  },
-  {
-    companyNameText: "Robert Bosch d.o.o.",
-    workPeriodStartText: 2021,
-    workPeriodEndText: "Present",
-    companyRoleText: "Frontend Developer",
-    tasksList: [
-      "Currently learning and developing web applications using HTML, CSS, and TypeScript",
-    ],
-  },
-];
+const experiencesObjectsArray = myResumeInfoObject.experience;
 
 const companyNames = [];
 
@@ -126,33 +165,7 @@ experiencesObjectsArray.forEach((experience) => {
 // Projects
 const projects = document.getElementById("projects");
 
-const projectsObjectsArray = [
-  // Add project object
-  {
-    projectName: "My iOS Project",
-    projectDescriptionList: [
-      "Developed using Swift, SwiftUI and UI",
-      "Google Maps SDK",
-      "Offline-first approach - Core Data",
-      "MVVM Architecture",
-    ],
-  },
-  {
-    projectName: "My Java Project",
-    projectDescriptionList: [
-      "Developed a library management system using Java",
-      "Integrated MySQL for database management",
-      "Implemented multi-threading for concurrent operations",
-    ],
-  },
-  {
-    projectName: "My TypeScript Project",
-    projectDescriptionList: [
-      "Building my resume web page",
-      "Developed using HTML/CSS",
-    ],
-  },
-];
+const projectsObjectsArray = myResumeInfoObject.projects;
 
 projectsObjectsArray.forEach((project) => {
   // Create elements
