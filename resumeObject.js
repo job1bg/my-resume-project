@@ -1,6 +1,7 @@
 // Create your own resume
 // Set up info
 export const myResumeInfoObject = {
+  resumeTitle: "Branislav - Resume",
   titleName: "Branislav Jovanović",
   address: "Bulevar JNA 30",
   birthday: "January 1, 1996",
@@ -62,4 +63,5 @@ export const myResumeInfoObject = {
       ],
     },
   ],
+  footerCopyrightText: "Branislav Jovanović",
 };

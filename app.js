@@ -1,6 +1,10 @@
 import { myResumeInfoObject } from "./resumeObject.js";
 
 // Web Page Implementation
+// Head - title
+const resumeTitle = document.getElementById("resumeTitle");
+resumeTitle.textContent = myResumeInfoObject.resumeTitle;
+
 // Header - title name
 const titleName = document.getElementById("titleName");
 titleName.textContent = myResumeInfoObject.titleName;
@@ -128,3 +132,6 @@ projectsObjectsArray.forEach((project) => {
   // Insert Root Into Container
   projects.appendChild(projectContainer);
 });
+
+const footerCopyrightText = document.getElementById("footerCopyrightText");
+footerCopyrightText.textContent = myResumeInfoObject.footerCopyrightText;

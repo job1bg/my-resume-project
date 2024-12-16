@@ -78,7 +78,10 @@ ul {
 }
 
 .resume-footer {
+    display: flex;
+    flex-direction: row;
     text-align: center;
+    justify-content: center;
     padding: 10px 0;
     background-color: #0052aa;
     color: white;
@@ -88,4 +91,8 @@ ul {
 hr {
 margin: 0;
 margin-bottom: 10px;
+}
+
+#footerCopyrightText {
+    padding: 0 3px;
 }
