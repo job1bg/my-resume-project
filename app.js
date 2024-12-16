@@ -133,5 +133,6 @@ projectsObjectsArray.forEach((project) => {
   projects.appendChild(projectContainer);
 });
 
+// Assign Copyright Text In Footer
 const footerCopyrightText = document.getElementById("footerCopyrightText");
 footerCopyrightText.textContent = myResumeInfoObject.footerCopyrightText;
