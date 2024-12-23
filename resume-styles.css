@@ -54,3 +54,7 @@
     flex-direction: column;
     gap: 10px;
 }
+
+#educationalTitleText {
+    padding-bottom: 5px;
+}

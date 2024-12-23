@@ -1,33 +1,4 @@
-// Create your own resume
-interface Experience {
-  companyNameText: string;
-  workPeriodStartText: string | number;
-  workPeriodEndText: string | number;
-  companyRoleText: string;
-  tasksList: string[];
-}
-
-interface Project {
-  projectName: string;
-  projectDescriptionList: string[];
-}
-
-interface ResumeInfo {
-  resumeTitle: string;
-  titleName: string;
-  address: string;
-  birthday: string;
-  languages: string;
-  educationalTitle: string;
-  facultyName: string;
-  graduationYear: string | number;
-  skills: string[];
-  experience: Experience[];
-  projects: Project[];
-  footerCopyrightText: string;
-}
-
-export const myResumeInfoObject: ResumeInfo = {
+export const myResumeInfoObject = {
   resumeTitle: "Branislav - Resume",
   titleName: "Branislav Jovanović",
   address: "Bulevar JNA 30",
