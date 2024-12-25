@@ -6,8 +6,9 @@
     <title id="resumeTitle"></title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="interview-styles.css">
+    <script type="module" src="./dist/appInit.js" defer></script>
 </head>
-<body>
+<body onload="window.renderC()">
     <div class="resume">
         <header class="resume-header">
             <h1 class="title-name"></h1>
@@ -41,6 +42,5 @@
             <p>©<p class="footerCopyrightText"></p>- 2024</p>
         </footer>
     </div>
-    <script type="module" src="appInit.js"></script>
 </body>
 </html>

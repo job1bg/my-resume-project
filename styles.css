@@ -52,13 +52,24 @@ body {
     padding: 10px;
 }
 
-.content, .content-interview {
+.content {
+    gap: 20px;
+    padding: 20px;
+    color: #333;
+    height: 77vh;
+    display: grid;
+    overflow-y: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.content-interview {
     display: flex;
     overflow-y: auto;
     gap: 20px;
     padding: 20px;
     color: #333;
-    height: 73vh;
+    height: 77vh;
 }
 
 h3, h2 {

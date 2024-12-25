@@ -1,4 +1,4 @@
-import { ResumeDataManager } from "../data/resumeDataManager.js";
+import { ResumeDataManager } from "../data/ResumeDataManager.js";
 
 export class ResumeDOMRenderer {
   private dataManager: ResumeDataManager;
@@ -7,8 +7,8 @@ export class ResumeDOMRenderer {
       this.dataManager = new ResumeDataManager();
   }
 
-  renderResumeData() {
-      const resumeData = this.dataManager.getResumeData();
+  renderResumeData = async () => {
+      const resumeData = await this.dataManager.getResumeData();
 
       // Update HTML elements
       // Personal Information - Address
@@ -134,5 +134,9 @@ export class ResumeDOMRenderer {
         // Insert Root Into Container
         projects.appendChild(projectContainer);
       });
+
+      // User Image
+      const image = document.getElementById("resumeImage") as HTMLImageElement;
+      image.src = resumeData.profilePictureUrl;
   }
 }

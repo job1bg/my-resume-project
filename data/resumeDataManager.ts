@@ -1,11 +1,27 @@
-import { myResumeInfoObject, ResumeInfo } from "./resumeObject.js";
+import { myResumeInfoObject } from "./resumeObject.js";
+import { ResumeInfo, SimplifiedUser } from "./UserDataAPI.js";
+import { RandomUserDataFetcher } from "./RandomUserDataFetcher.js";
 
 export class ResumeDataManager {
-    getResumeData(): ResumeInfo {
+    private fetcher: RandomUserDataFetcher;
+    private fakeApiData?: SimplifiedUser | null;
+
+    constructor() {
+        this.fetcher = new RandomUserDataFetcher();
+    }
+    
+    getResumeData = async (): Promise<ResumeInfo> => {
+        const fakeUser: SimplifiedUser | null = await this.fetcher.fetchRandomUserData();
+        if (await fakeUser) {
+            this.fakeApiData = fakeUser;
+        } else {
+            console.log("Failed to fetch fake user data.")
+        }
+
         let data: ResumeInfo = {
-            resumeTitle: myResumeInfoObject.resumeTitle,
-            titleName: myResumeInfoObject.titleName,
-            address: myResumeInfoObject.address,
+            resumeTitle: this.fakeApiData?.titleName ?? `${myResumeInfoObject.resumeTitle} - Resume`,
+            titleName: this.fakeApiData?.titleName ?? myResumeInfoObject.titleName,
+            address: this.fakeApiData?.address ?? myResumeInfoObject.address,
             birthday: myResumeInfoObject.birthday,
             languages: myResumeInfoObject.languages,
             educationalTitle: myResumeInfoObject.educationalTitle,
@@ -15,6 +31,7 @@ export class ResumeDataManager {
             experience: myResumeInfoObject.experience,
             projects: myResumeInfoObject.projects,
             footerCopyrightText: myResumeInfoObject.footerCopyrightText,
+            profilePictureUrl: this.fakeApiData?.profilePictureUrl ?? myResumeInfoObject.profilePictureUrl
         }
         return data;
     }

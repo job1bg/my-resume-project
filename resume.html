@@ -6,8 +6,15 @@
     <title id="resumeTitle"></title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="resume-styles.css">
+    <script>
+        function render() {
+            window.renderR();
+            window.renderC();
+        }
+    </script>
+    <script type="module" src="./dist/appInit.js" defer></script>
 </head>
-<body>
+<body onload="render()">
     <div class="resume">
         <header class="resume-header">
             <h1 class="title-name"></h1>
@@ -17,7 +24,7 @@
         </header>
         <main class="content">
             <div class="box left-box">
-                <img src="img/portfolio-image.jpg" alt="Portfolio Image" class="resume-image">
+                <img id="resumeImage" src="img/portfolio-image.jpg" alt="Portfolio Image" class="resume-image">
 
                 <section class="box-section">
                     <h3>Personal Information</h3>
@@ -60,7 +67,5 @@
             <p>©<p class="footerCopyrightText"></p>- 2024</p>
         </footer>
     </div>
-    <script type="module" src="appInit.js"></script>
-    <script type="module" src="resume/resume.js"></script>
 </body>
 </html>

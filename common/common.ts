@@ -1,4 +1,4 @@
-import { ResumeDataManager } from "../data/resumeDataManager.js";
+import { ResumeDataManager } from "../data/ResumeDataManager.js";
 
 export class CommonDOMRenderer {
   private dataManager: ResumeDataManager;
@@ -7,8 +7,8 @@ export class CommonDOMRenderer {
       this.dataManager = new ResumeDataManager();
   }
 
-  renderCommonData() {
-    const resumeData = this.dataManager.getResumeData();
+  renderCommonData = async () => {
+    const resumeData = await this.dataManager.getResumeData();
 
     // Common Web Page Parts Implementation
     // Head - title

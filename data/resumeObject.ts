@@ -1,36 +1,10 @@
 // Create your own resume
-interface Experience {
-  companyNameText: string;
-  workPeriodStartText: string | number;
-  workPeriodEndText: string | number;
-  companyRoleText: string;
-  tasksList: string[];
-}
-
-interface Project {
-  projectName: string;
-  projectDescriptionList: string[];
-}
-
-export interface ResumeInfo {
-  resumeTitle: string;
-  titleName: string;
-  address: string;
-  birthday: string;
-  languages: string;
-  educationalTitle: string;
-  facultyName: string;
-  graduationYear: string | number;
-  skills: string[];
-  experience: Experience[];
-  projects: Project[];
-  footerCopyrightText: string;
-}
+import { ResumeInfo } from './UserDataAPI';
 
 export const myResumeInfoObject: ResumeInfo = {
-  resumeTitle: "Branislav - Resume",
+  resumeTitle: "Branislav Jovanović - Resume",
   titleName: "Branislav Jovanović",
-  address: "Bulevar JNA 30",
+  address: "Bulevar JNA 30, Beograd, Srbija",
   birthday: "January 1, 1996",
   languages: "Serbian, English",
   educationalTitle: "Bachelor of Science in Computer Science",
@@ -91,4 +65,5 @@ export const myResumeInfoObject: ResumeInfo = {
     },
   ],
   footerCopyrightText: "Branislav Jovanović",
+  profilePictureUrl: ""
 };
