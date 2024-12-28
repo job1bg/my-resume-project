@@ -12,7 +12,7 @@ export class ResumeDataManager {
     
     getResumeData = async (): Promise<ResumeInfo> => {
         const fakeUser: SimplifiedUser | null = await this.fetcher.fetchRandomUserData();
-        if (await fakeUser) {
+        if (fakeUser) {
             this.fakeApiData = fakeUser;
         } else {
             console.log("Failed to fetch fake user data.")

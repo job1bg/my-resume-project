@@ -14,7 +14,7 @@ export class ResumeDataManager {
         this.getResumeData = () => __awaiter(this, void 0, void 0, function* () {
             var _a, _b, _c, _d, _e, _f, _g, _h;
             const fakeUser = yield this.fetcher.fetchRandomUserData();
-            if (yield fakeUser) {
+            if (fakeUser) {
                 this.fakeApiData = fakeUser;
             }
             else {
